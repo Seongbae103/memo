@@ -1,8 +1,7 @@
-# 도커 설치
-### <a href> https://www.docker.com/products/docker-desktop/ </a>
+# Docker
+### <a href="https://www.docker.com/products/docker-desktop/">도커 설치</a>
 ### 터미널에 입력
-> 터미널 설치 : <a href> https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=ko-kr&gl=kr
-
+> <a href ="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=ko-kr&gl=kr">터미널 설치 후 입력</a>
 01. docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:5.6
 02. docker ps
 03. docker exec -it CONTAINER ID bash
@@ -45,3 +44,11 @@
 07. 다시 시작
 8. 
 <img src="C:\Users\AIA\Desktop\잡\ls.png">
+---
+## 이미지로 컨테이너 만들기
+1. docker create -it 이미지
+2. docker start name
+---
+error
+1. This error may indicate that the docker daemon is not running
+> 해결 <img src="C:\Users\AIA\Downloads\de.png">

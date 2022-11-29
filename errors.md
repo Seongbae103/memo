@@ -23,13 +23,26 @@
     self.seoul_crime[cols] = self.seoul_crime[cols].replace(',', '', regex=True).astype(int)
 참고한 내용 : <a href>https://acdongpgm.tistory.com/166
 
-### TypeError: 'NoneType' object does not support item assignment
-> 문제
->>
-> 원인
->>- 
+### MySQL 요구 버전 or later is required (found 현재 버전).
+> 원인 
+>> 버전 이슈
 
 > 해결
->>  
-> 
-    code
+>> - 지금 버전 지우고 요구 버전으로
+>> - docker에서는 sql 백업 후 업데이트 
+
+### django.db.utils.OperationalError: (2005, "Unknown server host 'mysql-container' (11001)")
+> 원인
+>> 호스트 명이 잘못됨
+
+> 해결
+>>  ATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "mydb",
+        "USER": "root",
+        "PASSWORD" : "root",
+        "HOST": "localhost",
+        "PORT": "3306"
+    }
+}<p>처럼 "HOST" : "호스트명"을 바꿔준다
