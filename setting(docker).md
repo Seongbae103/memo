@@ -5,7 +5,7 @@
 
 01. docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:5.6
 02. docker ps
-03. docker exec -it CINTAINER ID bash
+03. docker exec -it CONTAINER ID bash
 04. mysql -u root(user name) -p
 05. password는 입력되지 않는거 같아도 되는거니까 그냥 입력
 06. show databases;
@@ -21,12 +21,15 @@
 > <a href>https://www.heidisql.com/
 - 인스톨러 -> mydb
 ---
+# 시작할 때
+- docker ps -a
+- docker start containerID
+- docker exec -it containerID bash
+- name -U root -p
+- passward
+---
 # docker 대소문자 구분 안하는 설정
-01. docker ps -a
-02. docker start 이름
-03. docker exec -it 이름 bash
-4. 이름 -u root -p
-5. 패스워드
+01. 파워쉘에서 도커 시작
 6. show variables like 'lower_case_table_names';
 > <a style = color:red>값이 0이면 대소문자 구분, 1이면 구분x</a>
 07. exit
@@ -40,8 +43,5 @@
 11. [db명d]
 12. lower_case_table_names=1
 07. 다시 시작
+8. 
 <img src="C:\Users\AIA\Desktop\잡\ls.png">
----
-# 시작할 때
-- docker ps -a
-- docker start NAME
