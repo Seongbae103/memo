@@ -32,38 +32,4 @@ cd로 경로에 들어가서
 > - vs코드를 껐다 켠 뒤 터미널에 yarn 입력해서 확인
 
 ---
-# 기본(람다 사용)
-
-    import logo from './logo.svg';
-    import './App.css';
-    
-    function App() {
-      return (
-        <></>
-      );
-    }
-    export default App;
-
-    # function도 생략
-    const App = () => {
-      return (
-        <></>
-      );
-    }
-
-축소1
-
-        const App = () => {
-          return <></>
-        }
-        export default App
-축소2
-
-        const App = () => <></>
-        export default App
-
-
-const App = () => {}에서
-const App은 상수
-() => {}은 함수
 
