@@ -32,4 +32,6 @@ cd로 경로에 들어가서
 > - vs코드를 껐다 켠 뒤 터미널에 yarn 입력해서 확인
 
 ---
-
+## 
+<a href = "https://react-redux.js.org/tutorials/quick-start"> </a>
+<a href = "https://redux-toolkit.js.org/usage/usage-guide">툴킷</a>

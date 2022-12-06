@@ -85,3 +85,19 @@
 ---
 ## work, job, task
 
+---
+## MSA
+#### EDA
+> 이벤트 드리븐 아키텍처
+
+## 크로스 플랫폼(브릿지패턴)
+## 덕 타이핑(덕 패턴)
+> 객체의 타입이 아닌 메소드의 역할에 의해 객체의 역할이 주어지는 형태
+> 객체(클래스) 기반이 아니라 함수지향 - 함수를 통해
+#### 기존의 리덕스
+- action, store(actiontypes), reducer를 필요조건으로 가진다(세 개 동시면 충분조건)
+#### 덕 타이핑을 하면
+- components, container, store로 돼있던(12-05) 모듈들을 각 컨텐츠인 todos, counter등으로 나눈다(12-06)
+
+---
+## stateful/ stateless
