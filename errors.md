@@ -46,3 +46,28 @@
         "PORT": "3306"
     }
 }<p>처럼 "HOST" : "호스트명"을 바꿔준다
+
+### OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.
+> 원인
+>> 라이브러리 충돌
+
+> 해결
+>> libiomp5md.dll이 기실행중
+>> 재부팅으로 중지되지 않으므로 model load하는 부분의 .py나 노트북 상단에 os를 통해 중복 실행 허용
+
+    import os
+    os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
+### 이미지 생성모델 미출력
+> 원인 
+>> 뭐겠어
+
+> 해결
+>> plt.show()를 안했다
+
+### 
+> 원인
+>>
+
+> 해결
+> >>
