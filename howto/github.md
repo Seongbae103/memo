@@ -34,7 +34,11 @@ $ git fetch <branch 이름> → 변경 사항 확인 후 직접 병합
 $ git checkout <branch 이름><br/>
 $ git fetch upstream → 변경사항 불러오기<br/>
 $ git merge upstream/<branch 이름> → 변경사항 병합<br/>
+<<<<<<< HEAD
 $ git push origin <branch 이름> → 내 Fork에 최종 push
+=======
+$ git push origin <branch 이름> → 내 Fork에 최종 push<br/>
+>>>>>>> 99658240f9d6dca12978dbb1078adca3da4ac82f
 
 ##### branch 생성, 삭제(강제 삭제 -D)
 $ git branch <branch 이름><br/>
@@ -56,7 +60,11 @@ $ git remote -v
 - git pull
 
 ##### 수정 후 add, commit, push
+<<<<<<< HEAD
 $ git add .<br/>
+=======
+$ git add . <br/>
+>>>>>>> 99658240f9d6dca12978dbb1078adca3da4ac82f
 $ git commit -m "메세지"<br/>
 $ git push origin <작업 중인 branch 이름><br/>
 
