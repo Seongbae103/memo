@@ -21,3 +21,5 @@
 - 시스템 변수에 입력 후 path에 '%변수명%'으로 추가
 - cmd창에서 버전 확인
     > conda --version
+
+conda info -e # 가상환경 정보보기 명령어 
