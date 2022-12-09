@@ -65,9 +65,9 @@
 > 해결
 >> plt.show()를 안했다
 
-### 
+### RuntimeError: Input type (torch.cuda.FloatTensor) and weight type (torch.FloatTensor) should be the same
 > 원인
->>
+>> 디바이스 경로 에러
 
 > 해결
 > >>
