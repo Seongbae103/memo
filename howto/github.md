@@ -27,17 +27,17 @@ $ git checkout <branch 이름>
 
 ##### 작업 전 변경사항 불러오기(택 1)
 ##### fetch 사용 시 merge도 함께 진행(내 저장소에 변경 내용 반영 참고)
-$ git pull origin <branch 이름> → 변경 사항 자동 병합
+$ git pull origin <branch 이름> → 변경 사항 자동 병합<br/>
 $ git fetch <branch 이름> → 변경 사항 확인 후 직접 병합
 
 ##### 내 저장소에 변경 내용 반영
-$ git checkout <branch 이름>
-$ git fetch upstream → 변경사항 불러오기
-$ git merge upstream/<branch 이름> → 변경사항 병합
-$ git push origin <branch 이름> → 내 Fork에 최종 push
+$ git checkout <branch 이름><br/>
+$ git fetch upstream → 변경사항 불러오기<br/>
+$ git merge upstream/<branch 이름> → 변경사항 병합<br/>
+$ git push origin <branch 이름> → 내 Fork에 최종 push<br/>
 
 ##### branch 생성, 삭제(강제 삭제 -D)
-$ git branch <branch 이름>
+$ git branch <branch 이름><br/>
 $ git branch -d <branch 이름>
 
 ##### upstream 저장소 추가(초기 세팅)
@@ -50,9 +50,9 @@ $ git remote add upstream <메인 repository 주소>
 $ git remote -v
 
 ##### 수정 후 add, commit, push
-$ git add .
-$ git commit -m "메세지"
-$ git push origin <작업 중인 branch 이름>
+$ git add . <br/>
+$ git commit -m "메세지"<br/>
+$ git push origin <작업 중인 branch 이름><br/>
 
 ##### 업로드 후 git-hub 계정에 Pull Request 생성
 ##### Pull Request에 작업 내용 작성 후 Merge 클릭
