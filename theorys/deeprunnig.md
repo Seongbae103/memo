@@ -1,7 +1,7 @@
 # Deeprunning
 > ML + ANN
 - ANN이 설정값, ML이 상태값이 된다
-  - 그러므로 코딩 순서는 ANN → ML이 된다
+  - 코딩 순서는 ANN → ML이 된다
 
 ## GAN(생성적 적대 신경망)
 > LeNet을 베이스로 한다

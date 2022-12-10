@@ -126,3 +126,140 @@
 
 ---
 # Router (ERD의 Cross Entity와 같은 개념)
+## 11-30
+
+데이터프레임  csv 
+
+on_delete 부모가 지워지면 같이
+CASCADE
+
+바닐라js
+리액트 : 바닐라js에 라이브러리를 올린 것
+
+## 클라이언트 서버
+
+## json
+1. json의 구조 
+   - 파이썬 딕셔너리({})나 리스트([], json에서는 array)구조와 동일하다
+- 
+
+## 서버
+#### 서버 객체 생성
+    listen(port, [hostname], [backlog], [callback])
+
+---
+- 방법
+  - 생성자 a=A()구조
+  - 팩토리 pd.~구조
+
+- a = b에서 값인 b가 설정값과 상태값이다  
+  - 상태값 : 불규칙하고 바뀐다
+  - 설정값(context) : 맥락이 있다 
+  - 전역에 들어가면 거의 설정값, 지역은 상태를 갖는다
+  -
+<div>
+---|클라이언트 서버 | 웹서버 | was | db 서버
+---|---|---|---|---
+언어|리액트|---|---|sql
+</div>
+
+### CORS
+- sgi.py는 공유기 같은 역할 백에서 받은 내용을 프론트로 보내주는 역할
+- 크로스 관계는 두 객체가 서로 만나지 않고 기능을 공유한다.
+---
+# 12-01
+과정이 필요한 이유를 이해해야지 그냥 외우는 공부는 x
+
+## JavaScript 
+- ES(ECMAScript)6이상을 공부해야 인공지능에 사용 가능
+- 스크립트 -> 인터프리트 언어(컴파일 후 실행되는 컴파일과 달리 인터프리터는 바로 실행되기 때문에 더 어렵다)
+
+## React
+- SPA(single-page application)나 모바일 애플리케이션 개발에 사용 가능
+- 규모가 커지면 라우팅(WSGI), API통신 등이 요구
+- 라우팅과 API통신은 크로스(ERD의 크로스 엔티티와 같은 개념)
+## 
+인공지능 베이스에서는 뷰보다 리액트
+안드로이드에서는 뷰가 더 좋다
+
+
+---
+12-02
+## SPA(Single Page Application)와 MPA(Multiple Page Application)
+- MPA였을 때는 페이지 별로 코딩을 했지만 SPA를 사용하면 메모리 절약으로 인한 속도 향상이 가능
+  - 페이지 요청시마다 정적 리소스를 다운로드는 MPA와 달리 SPA는 모든 정적 리소스를 최초 한 번에 다운로드한다
+- 이미 정해진 코딩이 있는 MPA방식은 사용자에 따라 달라져야하는 인공지능에 부적합하고 속도도 느려서 SPA를 사용
+
+## 파이썬 구조분산 할당
+
+# SPA
+> 메모리 상에는 하나의 페이지만 존재한다(html은 여러개여도 된다)
+
+# pub sub 패턴
+- event data store 부분이 우리가 코딩하는 부분
+
+##### store의 의미
+- pub-sub에서 event data store
+- 화면처리에서는 컨테이너를 사용하고 스토어에는 데이터만 존재하도록 나눈다 
+- 상태 전부가 담기는 충분조건
+
+상대적인 개념이지만 설정의 위치에 있는 것들은 const(함수)로 나온다
+
+#### <div style=color:red>★★★★★ 이제 동기식이 아니라 비동기식으로 개발해야한다<p/>
+
+---
+## 맵 필터 리듀스
+
+--- 
+## Redux
+- 예측 가능한(=충분조건) 상태 컨테이너
+  - = 충분조건이 만족되면 자동으로 작동하는 컨테이너
+- 스칼라(단일값)으로 
+---
+#### 리액트 생태계는 프레임워크지만 리액트 안은 라이브러리
+
+##### 필요 충분 조건
+- 필요조건 : 반드시 필요한 조건(val)
+- 충분조건 : 만족되면 진술이 참인 조건(var)
+> var = val
+
+## 상태와 상태값
+- 상태 : 컨테이너 내부의 빈 공간
+- 상태값 : 
+- 차이 : 
+<a href ="https://zdnet.co.kr/view/?no=20221202183934">이벤트 드리븐</a>
+## axios
+> react와 django를 연동할 때 사용
+## 이미지 처리
+
+---
+12-06
+## MSA
+> 비동기식 연습
+> 
+## {...input, [name] : value }의 의미
+<img src="C:\Users\AIA\Downloads\5.png">
+dispatch:외부에서 입력받은 객체인 action을 store로 보내주는 역할
+store:view인 쟝고로 보낸다
+- dispatch에 담기면 store에 담기기 전에 빠져나갈 수 없다
+
+distpatch(addTodo({text:value}))에서
+함수 부분인 addTodo({text:value})가 action이다
+ 
+const todoSlice = createSlice({
+  name: 'todos',
+  initialState: [],
+
+---
+장고 연결
+---
+
+## 데이터
+- Data (info와의 차이는 )
+- DB : 데이터 저장소 (스토리지와의 차이는 디스크/메모리)
+- DB Tool
+- DBMS
+- DB Server
+- DB Center
+- Data Warehouse
+- Data Set

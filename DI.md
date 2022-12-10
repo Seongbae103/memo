@@ -1,3 +1,5 @@
+> pip가 자동으로 붙은 상태로 패키지를 인스턴스로 해서 한번에 관리
+
 # requirements.txt파일 생성
     flask==1.1.2
     Flask-Script==2.0.6

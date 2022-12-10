@@ -22,6 +22,9 @@ cd로 경로에 들어가서
     yarn start
 - src에서 코딩
   - index.js의 <App />는 App.js
+
+##  
+<a href ="https://ko.redux.js.org/introduction/getting-started/">Redux 설치</a>
 ---
 ### error
 #### case.1 
