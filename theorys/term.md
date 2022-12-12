@@ -108,7 +108,7 @@
 - 에러시 consol.lig로 버블이 끊긴 부분을 해결해야한다
 <a style="color:p">버블링과 캡쳐링은 느리다 스토어에 집어넣는 디스패치를 이용해서 사용</a>
 
-# <a style="color:red">한 컨테이너에 양, 단방향을 둘 다 넣지마라</a>
+#### <a style="color:red">한 컨테이너에 양, 단방향을 둘 다 넣지마라</a>
 
 ---
 
@@ -126,7 +126,6 @@
 
 ---
 # Router (ERD의 Cross Entity와 같은 개념)
-## 11-30
 
 데이터프레임  csv 
 
@@ -156,18 +155,18 @@ CASCADE
   - 상태값 : 불규칙하고 바뀐다
   - 설정값(context) : 맥락이 있다 
   - 전역에 들어가면 거의 설정값, 지역은 상태를 갖는다
-  -
-<div>
+  
+
 ---|클라이언트 서버 | 웹서버 | was | db 서버
 ---|---|---|---|---
 언어|리액트|---|---|sql
-</div>
+
 
 ### CORS
 - sgi.py는 공유기 같은 역할 백에서 받은 내용을 프론트로 보내주는 역할
 - 크로스 관계는 두 객체가 서로 만나지 않고 기능을 공유한다.
 ---
-# 12-01
+tip?
 과정이 필요한 이유를 이해해야지 그냥 외우는 공부는 x
 
 ## JavaScript 
@@ -184,7 +183,7 @@ CASCADE
 
 
 ---
-12-02
+
 ## SPA(Single Page Application)와 MPA(Multiple Page Application)
 - MPA였을 때는 페이지 별로 코딩을 했지만 SPA를 사용하면 메모리 절약으로 인한 속도 향상이 가능
   - 페이지 요청시마다 정적 리소스를 다운로드는 MPA와 달리 SPA는 모든 정적 리소스를 최초 한 번에 다운로드한다
@@ -263,3 +262,8 @@ const todoSlice = createSlice({
 - DB Center
 - Data Warehouse
 - Data Set
+
+batch : 샘플을 자른 것
+
+## Ground Truth
+> 실제값

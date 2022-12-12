@@ -2,7 +2,7 @@
 ### ※ PowerShall 관리자권한으로 실행 
     cd (파일경로)
     mkdir (프로젝트명)
-    cd d(탭 gksqjs)
+    cd d(탭 한번)
     pip install django
     pip install djangorestframework
     pip install markdown
@@ -13,6 +13,7 @@
     python m (만 치고 탭키) runserver
     http://127.0.0.1:8000 Ctrl + 클릭
     확인 후 ctrl + c로 종료
+
 ### mysql 연동
 - 파이참 데이터베이스에서 '+' 아니면 도커 에러 케이스3대로 해결
 - admin의 settings.py에서 데이터베이스 수정<p>
