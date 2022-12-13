@@ -41,6 +41,40 @@
 ※ 주의 : models.py는 자동으로 테이블을 생성해주는 파일이지만 이 과정이 아닌 수동으로 생성하거나 설정값을 주지 않으면 테이블이 생성되지 않는다
 
 ---
+## 장고, 리액트 연결
+### 1) 리액트에서 준비
+- src/폴더에 
+  
+
+    api의 index.js
+    import axios from "axios";
+    const server = `http://127.0.0.1:8000`
+    export const strokeapi = req => axios.get(`${server}파이참 내의 url에서 지정한 경로/url에서 지정한 이름`, req)
+<br/>
+
+    components의 .jsx
+    import { strokeapi } from "blog/api"
+
+    const Stroke = () => {
+        const onClick = e =>{
+            e.preventDefault()
+            strokeapi() /**api index에서 export한 주소를 받아준다*/
+        }
+        return (
+        <>
+        <button onClick={onClick}> 실행 </button>
+        </>
+        )}
+    export default Stroke
+<br/>
+
+    폴더의 index.js
+    export {default as 파일명} from "파일 경로/파일명"
+
+### 2) 장고에서 연결
+
+
+---
 ## 설정시 문제
 ##### error1
 > django-admin : The term 'django' is not recognized~<p>
