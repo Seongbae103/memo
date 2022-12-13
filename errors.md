@@ -1,3 +1,7 @@
+- 타입체크 
+
+
+    print(f'type {type(self.iris)}')
 ### error: (-215:Assertion failed) !empty() in function
 > 원인
 >>- haarcascade_fronface.xml이 프로젝트 파일에 없을 때
