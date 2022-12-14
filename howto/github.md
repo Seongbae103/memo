@@ -89,3 +89,13 @@ $ git push origin <작업 중인 branch 이름><br/>
     git branch로 확인 
 
 ### feature, hotfix, 
+
+---
+## Errors
+##### error: failed to push some refs to 
+> 원인
+>
+>>깃허브 내에 있는 파일이나 폴더가 로컬에는 없을 때 발생하는 문제
+>
+> 해결
+>> pull 후 다시 push
