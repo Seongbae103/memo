@@ -18,14 +18,14 @@ ___
 <p>
 
 - Windows termunal 설치
-  - 터미널에서 다음 순서로 입력
-      - mysql -u root -p
-      - root
-      - use mysql
-      - create database mariadb;
-      - show databases;
-      - use mariadb
-      - create user 'mariadb'@'localhost' identified by 'mariadb';
-      - grant all privileges on mariadb.* to mariadb@localhost;
-      - flush privileges;
-      - exit;
+- 터미널에서 다음 순서로 입력(도커 실행이 먼저)
+    - mysql -u root -p
+    - root
+    - use mysql
+    - create database mariadb;
+    - show databases;
+    - use mariadb
+    - create user 'mariadb'@'localhost' identified by 'mariadb';
+    - grant all privileges on mariadb.* to mariadb@localhost;
+    - flush privileges;
+    - exit;
