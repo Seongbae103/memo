@@ -1,4 +1,4 @@
-# Deeprunning
+# Deeplearning
 > ML + ANN
 - ANN이 설정값, ML이 상태값이 된다
   - 코딩 순서는 ANN → ML이 된다
