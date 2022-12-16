@@ -75,3 +75,36 @@
 
 > 해결
 > >>
+
+### Python TypeError: 'int' object is not subscriptable
+> 원인
+>> 리액트-장고 연결된 상태에서 GET과 POST의 onClick 모양이 다른데 GET의 내용을 POST에도 그대로 적용해서 생긴 문제
+
+> 해결
+>>  GET이 아래 모양이면</br>
+    const onGetClick = e =>{
+        e.preventDefault()
+        getfashion(id)
+        .then((res)=>{
+            alert(`카테고리 : ${JSON.stringify(res.data.result)}`)
+        })
+        .catch((err)=>{
+            console.log(err)
+            alert('실패')
+        })
+    }
+> 
+> POST는 아래처럼 코드를 추가해준다
+>
+>>  const onPostClick = e =>{</br>
+    e.preventDefault()</br>
+    <a style=color:red>const request = {id} </br>
+    postfashion(request) </a></br>
+    .then((res)=>{
+        alert(`카테고리 : ${JSON.stringify(res.data.result)}`)
+    })
+    .catch((err)=>{
+        console.log(err)
+        alert('실패')
+    })
+}

@@ -19,8 +19,6 @@
 
 
 ### 마이그래이션
-    python manage.py makemigrations
-    python manage.py migrate
 
 ### DockerFile
 - 버전 이슈에 대한 대처가 쉽다
