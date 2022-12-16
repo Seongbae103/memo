@@ -75,3 +75,4 @@ const App은 상수
 
 ## InterFace
 > 상속, 인과에는 없고 의존 관계에만 존재
+
