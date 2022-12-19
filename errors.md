@@ -80,7 +80,7 @@
 > 원인
 >> 리액트-장고 연결된 상태에서 GET과 POST의 onClick 모양이 다른데 GET의 내용을 POST에도 그대로 적용해서 생긴 문제
 
-> 해결
+> 해결1
 >>  GET이 아래 모양이면</br>
     const onGetClick = e =>{
         e.preventDefault()
@@ -108,3 +108,6 @@
         alert('실패')
     })
 }
+
+### Method Not Allowed: /shop/iris/iris
+### ValueError: set_wakeup_fd only works in main thread of the main interpreter
