@@ -51,7 +51,17 @@
 1. docker create -it 이미지
 2. docker start name
 ---
-error
-1. This error may indicate that the docker daemon is not running
+# error
+### 1. This error may indicate that the docker daemon is not running
 > 해결 <img src="C:\Users\AIA\Downloads\de.png">
 > 
+### 2. WSL 2 installation is incomplete
+> 해결
+> - 리눅스 서브시스템 활성 명령어 입력
+> > dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+>
+> - 가상머신 플랫폼 기능 활성화 명령어 입력
+> > dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+>
+> - x64 머신용 WLS2 Linux 커널 업데이트 패키지 다운로드 및 설치
+> <a href = "https://learn.microsoft.com/ko-kr/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package">설치 </a>
