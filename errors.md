@@ -111,3 +111,6 @@
 
 ### Method Not Allowed: /shop/iris/iris
 ### ValueError: set_wakeup_fd only works in main thread of the main interpreter
+### sqlalchemy.exc.DataError: (pymysql.err.DataError) (1366, "Incorrect integer value: 'tqmbiznaye' for column 'blog_userid' at row 1")
+> 원인
+>> DB 생성시 설정한 컬럼의 데이터타입이 입력된 데이터 타입과 달라서 발생한 문제

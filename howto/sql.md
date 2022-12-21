@@ -62,5 +62,16 @@ DQL|관리| --- |getter
 > 클러스터링<p>
 >> 열을 줄이는 차원 축소와 다르게 행을 줄인다  
 ---
+## 판다스db mysql로
+### db연결
+    from sqlalchemy import create_engine
+    import pymysql
+    import pandas as pd
+    db_connection_str = 'mysql+pymysql://[db유저이름]:[db password]@[host address]/[db name]'
+    db_connection = create_engine(db_connection_str)
+    conn = db_connection.connect()
+### db저장
+    df.to_sql(name='db의 테이블이름', con=db_connection, if_exists='append',index=False)  
+
 참고 : <a>https://data-make.tistory.com/25
     
