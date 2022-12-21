@@ -68,3 +68,4 @@
 >  
 > - 도커 재설치
 > - x64 머신용 WLS2 Linux 커널 업데이트 패키지 다운로드 및 설치(윗 내용 참고)
+### 3. OCI runtime exec failed: exec failed:
