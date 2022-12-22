@@ -114,3 +114,22 @@
 ### sqlalchemy.exc.DataError: (pymysql.err.DataError) (1366, "Incorrect integer value: 'tqmbiznaye' for column 'blog_userid' at row 1")
 > 원인
 >> DB 생성시 설정한 컬럼의 데이터타입이 입력된 데이터 타입과 달라서 발생한 문제
+### jpype._jvmfinder.JVMNotFoundException: No JVM shared library file (jvm.dll) found. Try setting up the JAVA_HOME environment variable properly.
+> 원인
+>> 환경변수 문제
+> 
+> 해결
+>> 환경변수가 제대로 됐있어도 안되면 
+>> 오류가 난 jvm.py파일에서 22번 라인에
+> - jvmpath = "C:\\Program Files\\jdk-11\\bin\\server\\jvm.dll"를 입력
+> - convertStrings=True 를 삭제
+
+### AttributeError: 'java.lang.String' object has no attribute 'rsplit'
+> 원인
+>> 은 모르겠고
+> 
+> 해결
+>> 에러가 발생한 _okt.py에서 78번 라인의 
+>>         else:
+            return [tuple(t.split('/', 1)) for t in tokens]
+> 에서 t.rsplit을 t.split으로 바꾼다
