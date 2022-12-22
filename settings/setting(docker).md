@@ -1,5 +1,7 @@
 # Docker
-### 1. <a href="https://www.docker.com/products/docker-desktop/">도커 설치</a>
+### 1. 설치
+- <a href="https://www.docker.com/products/docker-desktop/">도커 설치</a>
+- <a href = "https://learn.microsoft.com/ko-kr/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package">x64 머신용 WLS2 Linux 커널 업데이트 패키지 다운로드 및 설치 </a>
 ### 2. 터미널에 입력
 > <a href ="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=ko-kr&gl=kr">터미널 설치 후 입력</a>
 - docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:5.7
@@ -51,12 +53,28 @@
 1. docker create -it 이미지
 2. docker start name
 ---
-error
-1. This error may indicate that the docker daemon is not running
+# error
+### 1. This error may indicate that the docker daemon is not running
 > 해결 <img src="C:\Users\AIA\Downloads\de.png">
 > 
+<<<<<<< HEAD
 
 --- ## 이미지로 컨테이너 만들기 1. docker create -it 이미지 2. docker start name --- # error ### 1. This error may indicate that the docker daemon is not running > 해결
 
 
 > ### 2. WSL 2 installation is incomplete > 해결 > - 도커 삭제 > - 리눅스 서브시스템 활성 명령어 입력 > > dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart > > - 가상머신 플랫폼 기능 활성화 명령어 입력 > > dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart > > - 도커 재설치 > - x64 머신용 WLS2 Linux 커널 업데이트 패키지 다운로드 및 설치(윗 내용 참고) ### 3. OCI runtime exec failed: exec failed: docker Image가 Alpine인 경우 /bash 대신 /sh를
+=======
+### 2. WSL 2 installation is incomplete
+> 해결
+> - 도커 삭제
+> - 리눅스 서브시스템 활성 명령어 입력
+> > dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+>
+> - 가상머신 플랫폼 기능 활성화 명령어 입력
+> > dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+>  
+> - 도커 재설치
+> - x64 머신용 WLS2 Linux 커널 업데이트 패키지 다운로드 및 설치(윗 내용 참고)
+### 3. OCI runtime exec failed: exec failed:
+ docker Image가 Alpine인 경우 /bash 대신 /sh를 
+>>>>>>> db864615f66504ae803a8fc64e4287607dad7386
