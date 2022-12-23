@@ -1,21 +1,20 @@
 ## <div align="center">Contents</div>
-<button>[1. Settings](#1-settings)</button>
-<button>[2. HowTo](#2-howto)</button>
-<button>[3. Theorys](#3-theorys)</button>
-<button>[4. Codes](#4-codes)</button>
+<button>[1. Settings](#1-settings)</button><br>
+<button>[2. HowTo](#2-howto)</button><br>
+<button>[3. Theorys](#3-theorys)</button><br>
+<button>[4. Codes](#4-codes)</button><br>
 
-
+---
 
 <div >
 
 ### 1. Settings
-IDE<br>
-Anaconda<br>
-Pycharm<br>
-Docker<br>
-React<br>
-IDE<br>
-DeepLearning<br>
+1.1 IDE<br>
+1.2 Anaconda<br>
+1.3 Pycharm<br>
+1.4 Docker<br>
+1.5 React<br>
+1.6 DeepLearning<br>
 </div>
 
 ---
@@ -26,7 +25,7 @@ DeepLearning<br>
 - <a href="https://github.com/Seongbae103/memo/blob/main/howto/Docker.md">Docker</a><br>
 - <a href="https://github.com/Seongbae103/memo/blob/main/howto/React.md">React</a><br>
 - <a href="https://github.com/Seongbae103/memo/blob/main/howto/cloud.md">Cloud</a><br>
-- <a href="https://github.com/Seongbae103/memo/blob/main/howto/drf.md">DRF(DjangoRestFramework</a><br>
+- <a href="https://github.com/Seongbae103/memo/blob/main/howto/drf.md">DRF(DjangoRestFramework)</a><br>
 - <a href="https://github.com/Seongbae103/memo/blob/main/howto/github.md">GitHub</a><br>
 - <a href="https://github.com/Seongbae103/memo/blob/main/howto/linux_basic(11-29).md">Linux Basic</a><br>
 - <a href="https://github.com/Seongbae103/memo/blob/main/howto/preprocess.MD">Preprocess</a><br>

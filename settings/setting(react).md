@@ -1,5 +1,7 @@
 # React
-### node_module은 설정값이라 무거우니까 주의
+##### node_module은 설정값이라 무거우니 .gitignore에 추가
+
+
 ## 설정 
 > 순서 : vscode → node → npm → yarn
 ### 1. vs코드 설치

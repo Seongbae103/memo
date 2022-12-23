@@ -97,4 +97,40 @@ const App은 상수
   - 디스패치
     > 스토어의 내장함수 중 하나로 액션 객체를 넘겨줘서 상태를 업데이트 하는 유일한 방법
     > 
+
 <a href ="https://kyun2da.dev/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/Redux-%EC%A0%95%EB%A6%AC/">redux 참고한 블로그</a>
+
+    import webcrawler from "../api"
+    import {useState} from 'react'
+    const NaverMovie = ()=> {
+        const [movie, setMovie] = useState()
+        const onClick = e =>{
+            e.preventDefault()
+            webcrawler.getNaverMovie().then(res => {
+                const json = JSON.parse(res)
+                setMovie(json['result'])
+            })
+            let arr = document.getElementsByClassName('box')
+            for(let i=0; i<arr.length; i++) arr[i].value = ""
+        }
+
+        return (<>
+        <h5>네이버 크롤러</h5>
+        <button onClick={onClick}>크롤링 시작</button>
+        <p>버튼을 클릭하면 네이버 영화 목록이 출력</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>순위</th><th>영화 목록</th>
+                </tr>
+            </thead>
+            <tbody>
+            {movie && movie.map(({rank, title})=>(
+                <tr key={rank}><td>{rank}</td><td>{title}</td></tr>
+            ))}    
+            </tbody>
+        </table>     
+        </>)
+    }
+    export default NaverMovie
+에서 

@@ -39,14 +39,21 @@
 - cd ..
 - cd dj+tab
 - ls
-- 생성 후 admin의 setting에서 INSTALLED_APPS에 모듈명.파일명.파일명config -> 설정값
+- 생성 후 admin/setting/INSTALLED_APPS에 모듈명.파일명.파일명config -> 설정값
 - models.py
+> 프로젝트/admin/settings.py의 INSTALLED_APPS에 있는 모듈명.파일명.파일명config은 app에 있는 이름과 같아야 한다
+> #### 예시 
+> - settings에서 한번에 주고 싶으면 settings에는 blog 입력, users와 tags에는 각각 blog.users, blog.tags를 입력
 ※ 주의 : models.py는 자동으로 테이블을 생성해주는 파일이지만 이 과정이 아닌 수동으로 생성하거나 설정값을 주지 않으면 테이블이 생성되지 않는다
 
 
-## 마이그래이션
+## 마이그레이션
+
+- migration 폴더 안에 0001_initial.py이 없으면 
     python manage.py makemigrations
+- migration 폴더 안에 0001_initial.py이 있으면
     python manage.py migrate
+
 ### 설정 과정   
 db -> app-> middleware
 

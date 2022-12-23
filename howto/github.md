@@ -91,7 +91,8 @@ $ git push origin <작업 중인 branch 이름><br/>
 ### feature, hotfix, 
 
 ### ignore
-
+- 루트에 .gitignore파일 생성 후 내용 추가
+- 지금은 파이참은 yolo, 리액트는 facebook의 깃허브 참고
 ---
 ## Errors
 ##### error: failed to push some refs to 
