@@ -90,6 +90,8 @@ $ git push origin <작업 중인 branch 이름><br/>
 
 ### feature, hotfix, 
 
+### ignore
+
 ---
 ## Errors
 ##### error: failed to push some refs to 
