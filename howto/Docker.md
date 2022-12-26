@@ -107,7 +107,8 @@ db -> app-> middleware
           - "!!!!"  (Dockerfile의 !!!!과 같은 수)
 ##### .3 docker compose up
 
-
+### 전체 날리기 
+    docker system prune --all --force
 ---
 
 ---

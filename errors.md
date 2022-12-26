@@ -139,3 +139,13 @@
 >> gunicorn 없음
 > 
 > 해결
+
+### django.db.utils.OperationalError: (2002, "Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (2)")
+> 원인
+> >
+> 해결
+> > - database volumes에       
+> >   - /opt/mydb/mysql_data:/var/lib/mysql
+> >   - /tmp/mydb/mysqld:/var/run/mysqld 
+> > - web volumes에 추가
+> >   - /tmp/mydb/mysqld:/run/mysqld
