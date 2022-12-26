@@ -133,3 +133,9 @@
 >>         else:
             return [tuple(t.split('/', 1)) for t in tokens]
 > 에서 t.rsplit을 t.split으로 바꾼다
+
+### Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "python manage.py runserver 0:8000": executable file not found in $PATH: unknown
+> 원인
+>> gunicorn 없음
+> 
+> 해결

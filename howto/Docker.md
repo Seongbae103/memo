@@ -57,6 +57,59 @@
 ### 설정 과정   
 db -> app-> middleware
 
+## <a href="https://learn.microsoft.com/ko-kr/dotnet/architecture/microservices/multi-container-microservice-net-applications/multi-container-applications-docker-compose">컴포지트</a>
+> 여러개의 컨테이너가 필요할 때 사용
+- yaml
+#### 방법(코드 풀이)
+##### .1 루트에 Dockerfile 생성
+
+
+    FROM python:3.9
+
+    WORKDIR /django_web
+    
+    COPY. .
+    COPY requirements.txt requirements.txt
+    
+    CMD ["python", "manage.py", "runserver", "0.0.0.0:!!!!"]
+
+##### .2 docker-compose.yml 생성
+
+    version: "3"
+
+    services:
+      databases:
+        image: mysql
+        container_name: 프로젝트명db (굳이 지금 쓰는 db와 같을 필요는 없다)
+        volumes:
+          - ~/docker/mysql/etc/mysql ('~'==현재경로/)(예시의 mysql은 앞)
+          - ~/docker/var/lib/mysql:/var/lib/mysql
+          - ~/docker/mysql/var/mysql:/var/log/mysql
+        environment:
+          - MYSQL_DATAVASE = mydb (settings.py에 있는 DATABASES의 이름)
+          - MYSQL_ROOT_PASSWORD = root
+          - MYSQL_ROOT_HOST = %
+        command: [ '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+      ports:
+          - 3306:3306  
+    web:
+        container_name: 프로젝트명dj:v1
+        image: seongbaepdl:v1
+        build: .
+        container_name: seongbaepdl:v1
+        command:
+          - python manage.py reunserver 0:8000
+        ports:
+          - "!!!!:!!!!"
+        volumes:
+          - .:/mydj ('.:/'==현재위치)
+        expose:
+          - "!!!!"  (Dockerfile의 !!!!과 같은 수)
+##### .3 docker compose up
+
+
+---
+
 ---
 ## 도커 에러
 ##### case.1 
@@ -76,3 +129,18 @@ At line:1 char:1<div>
 > 원인 : 인식 못함<div>
 >> 해결 : 파이참 실행시 나오는 안내창 눌러주면 끝나는 문제
 
+---
+## 컴포즈 에러
+##### failed to solve: rpc error: code = Unknown desc = failed to solve with frontend dockerfile.v0: failed to create<br>LLB definition: dockerfile parse error line 5: unknown instruction: COPY.
+> 원인
+> > Dockerfile의 COPY의 공백 문제
+> 
+> 해결
+> Dockerfile의 COPY. .을 COPY . .로 
+
+#####
+> 원인
+> > 컨테이너 이름 
+> 
+> 해결
+> > 

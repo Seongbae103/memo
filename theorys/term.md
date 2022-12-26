@@ -17,11 +17,12 @@
 
 ---
 ## 관계
-#### 상관 관계
-> 
-#### 연관 관계
-> 상속 등
-#### 의존 관계
+#### is a
+> 상관 관계
+#### has a
+##### 연관 관계(생명 주기가 동일)
+    > 상속 등
+##### 의존 관계(생명 주기가 다르다)
 
 ---
 ## 단방향 / 양방향
@@ -64,6 +65,7 @@
 
 ---
 ## 이미지 / 컨테이너
+- 이미지 : 특정 프로세스를 실행하기 위한 모든 파일과 속성값 
 ## 상태(state)값과 설정(context)값(-it)
 - 상태 : 변하냐 변하지 않냐의 차이
   - 변하는 상태는 상태값, 변하지 않는 상태는 설정값
@@ -78,7 +80,7 @@
 - 컨테이너 : 여러 컴포넌트를 담는 객체
 ---
 
-## Ayomic Pattern
+## Atomic Pattern
 - Atom → Molecule → Organism → Template → Page
     > 기본적으로 하위 개념은 상위 개념의 컴포넌트고 상위 개념은 하위 개념의 컨테이너
     >> 여기서는 원자, 분자, 유기체를 컴포넌트, 템플릿을 컨테이너로
@@ -242,7 +244,7 @@ dispatch:외부에서 입력받은 객체인 action을 store로 보내주는 역
 store:view인 쟝고로 보낸다
 - dispatch에 담기면 store에 담기기 전에 빠져나갈 수 없다
 
-distpatch(addTodo({text:value}))에서
+dispatch(addTodo({text:value}))에서
 함수 부분인 addTodo({text:value})가 action이다
  
 const todoSlice = createSlice({
