@@ -110,6 +110,12 @@ db -> app-> middleware
 ### 전체 날리기 
     docker system prune --all --force
 ---
+# 도커 백업 
+- docker login
+- docker images
+- docker image tag 컨테이너명:태그명 seongbaepark/레파지토리명:1.0
+- docker images
+- docker push 복사된 레파지토리명:tag명
 
 ---
 ## 도커 에러
@@ -129,7 +135,13 @@ db -> app-> middleware
 At line:1 char:1<div>
 > 원인 : 인식 못함<div>
 >> 해결 : 파이참 실행시 나오는 안내창 눌러주면 끝나는 문제
-
+##### 
+> DJANGO.DB.UTILS.OPERATIONALERROR: (1045, "ACCESS DENIED FOR USER 'ROOT'@'LOCALHOST' (USING PASSWORD: YES)")-MYSQL
+> 원인
+> >db 사용자명, 비밀번호 오류
+> 
+> 해결
+> > settings의 databases를 참고
 ---
 ## 컴포즈 에러
 ##### failed to solve: rpc error: code = Unknown desc = failed to solve with frontend dockerfile.v0: failed to create<br>LLB definition: dockerfile parse error line 5: unknown instruction: COPY.

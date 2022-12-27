@@ -149,3 +149,10 @@
 > >   - /tmp/mydb/mysqld:/var/run/mysqld 
 > > - web volumes에 추가
 > >   - /tmp/mydb/mysqld:/run/mysqld
+
+### [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+> 원인
+> > 구글 드라이버의 버전 문제(윈도우의 경우 64, 32 구분 때문에 발생하지는 않는다)
+> 
+> 해결
+> > 다른 버전의 구글 드라이브로 바꾼다
