@@ -27,6 +27,10 @@
           'PORT':'3306'
       }
   }
+- settings에 추가
+    CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:3000'
+                         ,'http://localhost:3000']
+    CORS_ALLOW_CREDENTIALS = True
 ##### 서버실행
 - docker create -it 이미지명
 - docker start 컨테이너명
