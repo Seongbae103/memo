@@ -142,13 +142,27 @@
 ## 시그모이드 함수
     시그모이드 함수는 S자형 곡선 또는 시그모이드 곡선을 갖는 수학 함수이다.
     시그모이드 함수의 예시로는 첫 번째 그림에 표시된 로지스틱 함수가 있다.
-## 시리얼라이즈(Serialize)
-## 시리즈(Series)
-## 시퀀스(Sequence)
+
+## 시퀀스(Sequence) 
+> term과 term 사이의 연산이 가능한 상태
 ## 시퀀셜(Sequential)
+## 시리얼라이즈(Serialize)
+> 직렬화, 시퀀스를 2진화하는 작업
+## 시리즈(Series)
+> 2진수로 변환된 시퀀스
 ## 알고리즘 성능 측정지표
-    https://jxo21.tistory.com/17
-    https://datascienceschool.net/03%20machine%20learning/09.04%20%EB%B6%84%EB%A5%98%20%EC%84%B1%EB%8A%A5%ED%8F%89%EA%B0%80.html
+<table>
+    <tr>
+    <th></th><th colspan="2">Predict</th>
+    </tr>
+    <tr>
+    <td rowspan="2">Reference</td><td>TP</td><td>FN</td>
+    </tr>
+    <tr>
+    <td>FP</td><td>TN</td>
+    </tr>
+</table>
+
     TP (True Positive) 정탐: 양성예측이 맞음 / 오류가 생겨서 보고함
     TN (True Negative) 정담: 음성예측이 맞음 / 오류가 없어서 보고없음
     FP (False Positive) 오탐: 양성예측이 틀림 / 오오류가 없는데 보고함
@@ -157,7 +171,10 @@
     Recall 재현율(=민감도): TP / (TP + FN)
     Accuracy 정확도: TP+ TN / (TP + TN + FP + FN) 맞게 예측한 샘플수의 비율-> 최적화 목적함수로 사용
     Fallout 위양성율: FP / (FP + TN)
-## 엔트로피(영어: entropy, 독일어: entropie):https://ko.wikipedia.org/wiki/%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC
+- <a href="https://jxo21.tistory.com/17">참고1</a><br>
+- <a href="https://datascienceschool.net/03%20machine%20learning/09.04%20%EB%B6%84%EB%A5%98%20%EC%84%B1%EB%8A%A5%ED%8F%89%EA%B0%80.html">참고2</a> 
+
+## <a href="https://ko.wikipedia.org/wiki/%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BC">엔트로피(영어: entropy, 독일어: entropie)</a>
     열역학적 계의 유용하지 않은 (일로 변환할 수 없는) 에너지의 흐름을 설명할 때 이용되는 상태 함수다.
     통계역학적으로, 주어진 거시적 상태에 대응하는 미시적 상태의 수의 로그로 생각할 수 있다.
     엔트로피는 일반적으로 보존되지 않고, 열역학 제2법칙에 따라 시간에 따라 증가한다.
