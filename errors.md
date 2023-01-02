@@ -157,3 +157,33 @@
 > 해결
 > > 다른 버전의 구글 드라이브로 바꾼다
 
+### RemoteDataError: Unable to read URL:
+> 문제
+> >from pandas_datareader import data <br>
+> 　　　data.get_data_yahoo 실행시 해당 에러
+> 
+> 해결
+> : 라이브러리 업데이트
+> > pip install --upgrade pandas<br>
+> >pip install --upgrade pandas-datareader
+
+### TypeError: string indices must be integers
+> 문제
+> > import yfinance as yf 사용시 해당에러 발생
+> 
+> 해결
+> > 문자열 인덱스는 정수여야하는데 해당 라이브러리에서 에러가 나면 yf.pdr_override() 추가
+
+### ValueError: Found array with dim 3.<br>StandardScaler export <= 2
+> 원인
+> > 차원이 맞지 않아서 생긴 문제
+> 
+> 해결
+> > StandardScaler를 실핼하기 전에 x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1] * x_train.shape[2]))처럼 reshape를 해준다
+
+### Failed to convert a NumPy array to a Tensor (Unsupported object type int).
+> 원인 
+> > 변수의 타입 문제
+> 
+> 해결
+> > 변수명=변수명.astype(np.float32)
