@@ -182,8 +182,13 @@
 > > StandardScaler를 실핼하기 전에 x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1] * x_train.shape[2]))처럼 reshape를 해준다
 
 ### Failed to convert a NumPy array to a Tensor (Unsupported object type int).
+### TypeError: only integer scalar arrays can be converted to a scalar index
 > 원인 
 > > 변수의 타입 문제
 > 
-> 해결
+> 해결    
 > > 변수명=변수명.astype(np.float32)
+
+### ValueError: Data cardinality is ambiguous: <br>x sizes: 83, 9<br>y sizes: 83<br>Make sure all arrays contain the same number of samples.
+> 원인
+> > 
