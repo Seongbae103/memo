@@ -1,6 +1,7 @@
-# Docker
-##### - <a href="https://github.com/Seongbae103/memo/blob/main/setting(docker).md">설치</a>
-### DB 및 table 생성
+# <a href="https://github.com/Seongbae103/memo/blob/main/setting(docker).md">Docker</a>
+
+---
+### 1. DB 및 table 생성
 ##### (<a href ="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=ko-kr&gl=kr">터미널이 없으면 여기</a>)
 - docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:5.7 (여기서 5.7을 빼면 최신 버전이 적용돼서 버전문제가 생긴다)
 - docker ps
@@ -15,14 +16,15 @@
 - select * from user;
 - insert into user values ('hong', 'pass');
 - select * from user;
-## 시작할 때
+---
+### 2. 시작할 때
 - docker ps -a
 - docker start containerID
 - docker exec -it containerID bash
 - name -U root -p
 - passward
-- 
-### 컨테이너 명령어
+---
+### 3. 컨테이너 명령어
 - docker ps -a #모든 컨테이너 출력(정지 컨테이너 포함)
 - docker ps #실행 중인 컨테이너만 출력
 - docker start hello #hello 이름의 컨테이너 시작
@@ -32,34 +34,17 @@
 - docker rm hello #hello 이름의 컨테이너 삭제
 - docker rm -f hello #hello 이름의 컨테이너 강제삭제
 ----
-### 전체 날리기 
+### 4. 전체 날리기 
     docker system prune --all --force
 ---
-# 도커 백업 
+### 5. 도커 백업 
 - docker login
 - docker images
 - docker image tag 컨테이너명:태그명 seongbaepark/레파지토리명:1.0
 - docker images
 - docker push 복사된 레파지토리명:tag명
-
-
-### 마이그래이션
-
-### DockerFile
-- 버전 이슈에 대한 대처가 쉽다
-
 ---
-## Docker 기반 Django에서 MySQL 연동으로 서버 실행
-- docker ps -a
-- docker image
-- docler create -it 이미지명
-- docker start 컨테이너명
-> error response from daemon:
->> 원인 
->>>  도커 스타트 이후 ps에 실행되는 컨테이너가 없어서 시작과 동시에 꺼짐
->> 해결
->>>
-## db테이블 자동생성
+### 6. db테이블 자동생성
 - django-admin startapp users
 - cd ..
 - cd dj+tab
@@ -71,20 +56,25 @@
 > - settings에서 한번에 주고 싶으면 settings에는 blog 입력, users와 tags에는 각각 blog.users, blog.tags를 입력
 ※ 주의 : models.py는 자동으로 테이블을 생성해주는 파일이지만 이 과정이 아닌 수동으로 생성하거나 설정값을 주지 않으면 테이블이 생성되지 않는다
 
-
-## 마이그레이션
-
+---
+### 마이그레이션
 - migration 폴더 안에 0001_initial.py이 없으면 
     python manage.py makemigrations
 - migration 폴더 안에 0001_initial.py이 있으면
     python manage.py migrate
 
-### 설정 과정   
-db -> app-> middleware
+### DockerFile
+- 버전 이슈에 대한 대처가 쉽다
 
-## <a href="https://learn.microsoft.com/ko-kr/dotnet/architecture/microservices/multi-container-microservice-net-applications/multi-container-applications-docker-compose">컴포지트</a>
-> 여러개의 컨테이너가 필요할 때 사용
-- yaml
+---
+## Docker 기반 Django에서 MySQL 연동으로 서버 실행
+- docker ps -a
+- docker image
+- docler create -it 이미지명
+- docker start 컨테이너명
+
+
+
 
 ## 이미지로 컨테이너 만들기
 1. docker create -it 이미지
@@ -164,6 +154,12 @@ At line:1 char:1<div>
 > 
 > 해결
 > > settings의 databases를 참고
+
+##### error response from daemon:
+> 원인 
+> >  도커 스타트 이후 ps에 실행되는 컨테이너가 없어서 시작과 동시에 꺼짐
+> 해결
+> > docker start 해야지...
 ---
 ## 컴포즈 에러
 ##### failed to solve: rpc error: code = Unknown desc = failed to solve with frontend dockerfile.v0: failed to create<br>LLB definition: dockerfile parse error line 5: unknown instruction: COPY.
