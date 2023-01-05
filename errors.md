@@ -187,8 +187,12 @@
 > > 변수의 타입 문제
 > 
 > 해결    
-> > 변수명=변수명.astype(np.float32)
+> > 변수명=변수명.astype(np.변경할 타입(거의 float32))
 
 ### ValueError: Data cardinality is ambiguous: <br>x sizes: 83, 9<br>y sizes: 83<br>Make sure all arrays contain the same number of samples.
 > 원인
-> > 
+> > 두 csv파일 간의 길이 문제
+> 
+> 해결
+> > 에러 메세지로 나온 수에 집착하지 말고 csv파일의 길이를 확인해서 맞춰준다
+> - 이번에는 83라는 숫자 자체를 찾으려다가 못잡던 문제로 .dropna가 제대로 적용됐는지 확인 

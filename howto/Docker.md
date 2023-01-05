@@ -1,5 +1,20 @@
 # Docker
 ##### - <a href="https://github.com/Seongbae103/memo/blob/main/setting(docker).md">설치</a>
+### DB 및 table 생성
+##### (<a href ="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=ko-kr&gl=kr">터미널이 없으면 여기</a>)
+- docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:5.7 (여기서 5.7을 빼면 최신 버전이 적용돼서 버전문제가 생긴다)
+- docker ps
+- docker exec -it CONTAINER ID bash
+- mysql -u root(user name) -p
+- password는 입력되지 않는거 같아도 되는거니까 그냥 입력
+- show databases;
+- create database mydb;
+- use mydb;
+- show tables;
+- create table user( id varchar(10) primary key, password varchar(10));
+- select * from user;
+- insert into user values ('hong', 'pass');
+- select * from user;
 ## 시작할 때
 - docker ps -a
 - docker start containerID
@@ -16,6 +31,16 @@
 - docker stop hello #hello 이름의 컨테이너 종료
 - docker rm hello #hello 이름의 컨테이너 삭제
 - docker rm -f hello #hello 이름의 컨테이너 강제삭제
+----
+### 전체 날리기 
+    docker system prune --all --force
+---
+# 도커 백업 
+- docker login
+- docker images
+- docker image tag 컨테이너명:태그명 seongbaepark/레파지토리명:1.0
+- docker images
+- docker push 복사된 레파지토리명:tag명
 
 
 ### 마이그래이션
@@ -60,6 +85,12 @@ db -> app-> middleware
 ## <a href="https://learn.microsoft.com/ko-kr/dotnet/architecture/microservices/multi-container-microservice-net-applications/multi-container-applications-docker-compose">컴포지트</a>
 > 여러개의 컨테이너가 필요할 때 사용
 - yaml
+
+## 이미지로 컨테이너 만들기
+1. docker create -it 이미지
+2. docker start name
+
+
 #### 방법(코드 풀이)
 ##### .1 루트에 Dockerfile 생성
 
@@ -107,15 +138,6 @@ db -> app-> middleware
           - "!!!!"  (Dockerfile의 !!!!과 같은 수)
 ##### .3 docker compose up
 
-### 전체 날리기 
-    docker system prune --all --force
----
-# 도커 백업 
-- docker login
-- docker images
-- docker image tag 컨테이너명:태그명 seongbaepark/레파지토리명:1.0
-- docker images
-- docker push 복사된 레파지토리명:tag명
 
 ---
 ## 도커 에러
