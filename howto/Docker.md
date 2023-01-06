@@ -34,8 +34,11 @@
 - docker rm hello #hello 이름의 컨테이너 삭제
 - docker rm -f hello #hello 이름의 컨테이너 강제삭제
 ----
-### 4. 전체 날리기 
+### 4. 컨테이너 제거
+    전체 제거 
     docker system prune --all --force
+    로그 제거
+    docker system prune --volumes
 ---
 ### 5. 도커 백업 
 - docker login
@@ -57,17 +60,17 @@
 ※ 주의 : models.py는 자동으로 테이블을 생성해주는 파일이지만 이 과정이 아닌 수동으로 생성하거나 설정값을 주지 않으면 테이블이 생성되지 않는다
 
 ---
-### 마이그레이션
+### 7. 마이그레이션
 - migration 폴더 안에 0001_initial.py이 없으면 
     python manage.py makemigrations
 - migration 폴더 안에 0001_initial.py이 있으면
     python manage.py migrate
 ---
-### DockerFile
+### 8. DockerFile
 - 버전 이슈에 대한 대처가 쉽다
 
 ---
-## Docker 기반 Django에서 MySQL 연동으로 서버 실행
+## 9. Docker 기반 Django에서 MySQL 연동으로 서버 실행
 - docker ps -a
 - docker image
 - docler create -it 이미지명
@@ -76,7 +79,7 @@
 
 ---
 
-## 이미지로 컨테이너 만들기
+## 10. 이미지로 컨테이너 만들기
 1. docker create -it 이미지
 2. docker start name
 

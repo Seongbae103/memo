@@ -12,4 +12,18 @@
 
 ## 3. 준비
 - 기본적인 틀은 <a href="https://github.com/Seongbae103/MSAServer/tree/main/fastApiProject">여기</a>를 참고<br>
-<img src="C:\Users\AIA\Desktop\fastapi 기본 틀.PNG">
+<img src="C:\Users\AIA\Desktop\캡쳐\fastapi 기본 틀.PNG">
+
+### 내용
+
+      RUN apt update \
+            && apt install -y mysql-server-5.7  \ #
+            && apt install --no-install-recommends -y tzdata \ #타임존
+            && apt clean
+
+
+
+
+---
+해설
+      - (./docker/mysql/initdb.d:)/docker-entrypoint-initdb.d : (경로)에 있는 쿼리를 실행해서 db로 접근
