@@ -1,4 +1,4 @@
-# FastAPI
+# FastAPI Setting
 
 ## 1. setting
 - django와 같은 가상환경으로 설정하고 터미널에서 입력
@@ -8,7 +8,7 @@
     - pip install fastapi 'uvicorn[standard]'
     - pip install uvicorn
 
-#### 2. DB연결
+#### 2. 도커 연동
 - docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:5.7 실행
 - 데이터베이스 생성
     <img src = "C:\Users\AIA\Desktop\db생성.PNG">

@@ -62,7 +62,7 @@
     python manage.py makemigrations
 - migration 폴더 안에 0001_initial.py이 있으면
     python manage.py migrate
-
+---
 ### DockerFile
 - 버전 이슈에 대한 대처가 쉽다
 
@@ -74,14 +74,14 @@
 - docker start 컨테이너명
 
 
-
+---
 
 ## 이미지로 컨테이너 만들기
 1. docker create -it 이미지
 2. docker start name
 
-
-#### 방법(코드 풀이)
+---
+### 방법(코드 풀이)
 ##### .1 루트에 Dockerfile 생성
 
 
