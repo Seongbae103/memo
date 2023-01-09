@@ -27,3 +27,18 @@
 ---
 해설
       - (./docker/mysql/initdb.d:)/docker-entrypoint-initdb.d : (경로)에 있는 쿼리를 실행해서 db로 접근
+
+---
+# error
+### RuntimeError: no validator found for <class 'sqlalchemy.sql.schema.Column'>, see `arbitrary_types_allowed` in Config
+### ModuleNotFoundError: No module named 
+> 상황
+> > pip install로 설치 후 import를 했지만 위의 에러가 발생
+> 
+> 원인
+> > requirements.txt 파일이 있는 경우 해당 파일에 install한 패키지를 입력하지 않아서 발생
+> 
+> 해결
+> > requirements.txt에 설치한 패키지 추가
+
+###  2023-01-09T07:57:16.111411Z 3 [Note] Aborted connection 3 to db: 'mydb' user: 'root' host: '172.20.0.1' (Got an error reading communication packets)

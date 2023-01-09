@@ -1,5 +1,6 @@
 # FastAPI Setting
 
+---
 ## 1. setting
 - django와 같은 가상환경으로 설정하고 터미널에서 입력
 #### 1.1 fastapi / uvicorn 설치
@@ -10,14 +11,14 @@
 
 #### 2. 도커 연동
 - docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:5.7 실행
-- 데이터베이스 생성
-    <img src = "C:\Users\AIA\Desktop\캡쳐\db생성.PNG">
 - docker compose up
 - Test connection
   - 사용DB에 우클릭 → Properties 클릭 후 Test connection 실행
-  - 실행 결과 Failed일 경우 이미지에 나온 경로에 들어가서 아래 코드 실행
+  - 실행 결과 Failed일 경우 이미지에 나온 경로에 들어가서 아래 코드 실행해서 권한 주기
     <img src="C:\Users\AIA\Desktop\캡쳐\grant 위치.png">
     > grant all privileges on *.* to 'root'@'%' identified by 'root'; 실행
+- 데이터베이스 생성
+    <img src = "C:\Users\AIA\Desktop\캡쳐\db생성.PNG">
 
 
 ## 3. 한글 깨짐 설정
@@ -75,7 +76,7 @@
 > <img src="C:\Users\AIA\Desktop\캡쳐\utf8yml.PNG">
 ---
 ### 참고
-<img src="C:\Users\AIA\Desktop\캡쳐\서버명.PNG">
+<img src="C:\Users\AIA\Desktop\캡쳐\서버명.PNG"><br>
 여기서 
 service: 밑에 있는 db:는 서버명이고 그 아래는 컨테이너명
 ---
