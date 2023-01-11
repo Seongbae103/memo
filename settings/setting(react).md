@@ -18,6 +18,8 @@
 yarn list에 아무것도 없으면 CRA사용 
 
     yarn create react-app <프로젝트명>
+
+### 필요한 프로그램 설치시 npm을 yarn보다 먼저 써줘야한다
 ### 사용
 cd로 경로에 들어가서 
 

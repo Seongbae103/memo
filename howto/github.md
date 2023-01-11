@@ -48,13 +48,12 @@ push 후 자동으로 빌드 및 배포하는 스크립트를 실행시켜주는
 
 ##### upstream 저장소 추가(초기 세팅)
 ##### Collaborators 에 협업자 등록된 상태
-##### origin 은 개인 repository에 위치 → 완료하면 Fork 로 연결되어 있어야 함
-##### upstream 은 메인 repository에 위치
+##### origin은 개인 repository에 위치 → 완료하면 Fork 로 연결되어 있어야 함
+##### upstream은 메인 repository에 위치
     git remote add upstream <메인 repository 주소>
 
 ##### remote 저장소 목록 확인(초기 세팅)
     git remote -v
-
 
 ### 매 작업시
 ##### sync, pull
@@ -70,24 +69,24 @@ $ git push origin <작업 중인 branch 이름><br/>
 ##### 업로드 후 git-hub 계정에 Pull Request 생성
 ##### Pull Request에 작업 내용 작성 후 Merge 클릭
 
-
-
-
-
 ### history 삭제
     git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch 파일명과 위치' --prune-empty -- --all
     -->반드시 파일위치와 파일명 둘 다 적어줘야 작동
     git push origin 브랜치명 --force
 ##### 브랜치명 확인
     git branch
-
+---
 ## 백업
 <a href ="https://git-scm.com/book/en/v2/Git-Branching-Branch-Management">링크</a>
     git branch
     git branch hotfix-핫픽스명(주로 날짜)
     git checkout hotfix-2022-12-14 #
     git branch로 확인 
+---
+## Action
 
+
+---
 ### feature, hotfix, 
 
 ### ignore
